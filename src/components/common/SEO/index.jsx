@@ -5,7 +5,6 @@ import {
 	url,
 	description,
 	social,
-	title,
 	socialLinks,
 	address,
 	contact,
@@ -14,7 +13,7 @@ import {
 	logo,
 } from 'Data'
 
-const SEO = ({ children, type, location = '' }) => {
+const SEO = ({ type, title, location = '' }) => {
 	const structuredDataOrganization = `{ 
 		"@context": "http://schema.org",
 		"@type": "${type}",
@@ -69,7 +68,7 @@ const SEO = ({ children, type, location = '' }) => {
 			<meta name="twitter:image:src" content={`${url}${Cover}`} />
 			<script type="application/ld+json">{structuredDataOrganization}</script>
 			<link rel="publisher" href={socialLinks.google} />
-			<title>{children}</title>
+			<title>{title}</title>
 			<html lang="en" dir="ltr" />
 		</Helmet>
 	)
