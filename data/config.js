@@ -1,8 +1,8 @@
 module.exports = {
 	title: 'BEAF',
-	logo: 'https://beaf-gatsby.netlify.com/favicon/logo-48.png',
+	logo: 'https://beafapp.com//favicon/logo-48.png',
 	author: 'Ismail Ghallou (Smakosh)',
-	url: 'https://beaf-gatsby.netlify.com',
+	url: 'https://beafapp.com',
 	legalName: 'Ismail Ghallou',
 	description: 'BEAF - Share your wonderful moments and embrace others feedback!',
 	socialLinks: {

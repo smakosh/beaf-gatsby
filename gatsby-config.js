@@ -29,7 +29,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-canonical-urls',
 			options: {
-				siteUrl: 'https://beaf-gatsby.netlify.com'
+				siteUrl: 'https://beafapp.com'
 			},
 		},
 		{

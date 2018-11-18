@@ -44,8 +44,8 @@ const Footer = () => {
 						</li>
 					</List>
 					<List>
-						<li><a href="https://beafapp.netlify.com/">Login</a></li>
-						<li><a href="https://beafapp.netlify.com/register">Register</a></li>
+						<li><a href="https://app.beafapp.com/">Login</a></li>
+						<li><a href="https://app.beafapp.com/register">Register</a></li>
 					</List>
 					<List>
 						<li>Follow me on</li>

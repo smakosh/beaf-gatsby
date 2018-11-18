@@ -15,8 +15,8 @@ const About = () => (
 		<Item as={Content}>
 			<h2>BEAF</h2>
 			<p>Share your Before & After moments with the people you love and get unbiased real feedback! It's for free and forever</p>
-			<Button as="a" href="https://beafapp.netlify.com/register">Register</Button>
-			<Button secondary as="a" href="https://beafapp.netlify.com/">Login</Button>
+			<Button as="a" href="https://app.beafapp.com/register">Register</Button>
+			<Button secondary as="a" href="https://app.beafapp.com/">Login</Button>
 		</Item>
 	</Wrapper>
 )
