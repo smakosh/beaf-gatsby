@@ -21,6 +21,10 @@ export const Item = styled.div`
   width: 100%;
   max-width: 30%;
 
+  @media (max-width: 960px) {
+    max-width: 100%;
+  }
+
   img {
     align-self: center;
     width: 100%;
