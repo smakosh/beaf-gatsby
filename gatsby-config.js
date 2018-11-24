@@ -39,13 +39,13 @@ module.exports = {
 				showSpinner: false
 			}
 		},
-		/* {
+		{
 			resolve: 'gatsby-plugin-google-analytics',
 			options: {
 				trackingId: config.googleAnalyticsID,
 				head: true
 			}
-		}, */
+		},
 		{
 			resolve: 'gatsby-plugin-google-fonts',
 			options: {
@@ -60,8 +60,8 @@ module.exports = {
 				name: 'gatsby-starter-default',
 				short_name: 'starter',
 				start_url: '/',
-				background_color: '#663399',
-				theme_color: '#663399',
+				background_color: config.backgroundColor,
+				theme_color: config.themeColor,
 				display: 'minimal-ui',
 				icon: './static/favicon/favicon.png', // This path is relative to the root of the site.
 			},
