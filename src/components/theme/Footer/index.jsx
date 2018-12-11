@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 import { Container } from 'Common'
 import Copyrights from './Copyrights'
 import {
-	FooterContainer,
 	FullContainer,
 	List,
 	Brand,
@@ -33,7 +32,7 @@ const Footer = () => {
 		}
 	]
 	return (
-		<FooterContainer>
+		<Fragment>
 			<FullContainer>
 				<Wrapper as={Container}>
 					<List>
@@ -44,7 +43,8 @@ const Footer = () => {
 						</li>
 					</List>
 					<List>
-						<li><a href="https://app.beafapp.com/">Login</a></li>
+						<li><a href="https://app.beafapp.com/">App</a></li>
+						<li><a href="https://app.beafapp.com/login">Login</a></li>
 						<li><a href="https://app.beafapp.com/register">Register</a></li>
 					</List>
 					<List>
@@ -60,7 +60,7 @@ const Footer = () => {
 				</Wrapper>
 			</FullContainer>
 			<Copyrights />
-		</FooterContainer>
+		</Fragment>
 	)
 }
 

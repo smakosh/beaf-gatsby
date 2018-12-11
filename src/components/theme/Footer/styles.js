@@ -13,15 +13,11 @@ export const Wrapper = styled.div`
 	}
 `
 
-export const FooterContainer = styled.footer`
-	margin-top: 6rem;
-`
-
 export const FullContainer = styled.div`
 	width: 100%;
-	padding: 8rem 0 2rem 0;
+	padding: 3rem 0;
 	color: #fff;
-	background-image: linear-gradient(10deg,#ff6347 0%,#ec9819 100%);
+	background: #2e2d4e;
 `
 
 export const List = styled.ul`

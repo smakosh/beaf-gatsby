@@ -12,7 +12,7 @@ export const Input = styled.input`
   border-width: 2px;
   border-color: #FF6347;
   border-style: solid;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: .9rem 1rem;
   font-size: 12pt;
 `

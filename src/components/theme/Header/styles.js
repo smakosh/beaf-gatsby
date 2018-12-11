@@ -5,6 +5,7 @@ export const StyledHeader = styled.div`
 	width: 100%;
 	z-index: 1;
 	border-bottom: .01em solid rgb(204, 204, 204);
+	border-top: 5px solid #191847;
 	margin-bottom: -3rem;
 `
 

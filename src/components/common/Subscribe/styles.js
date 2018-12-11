@@ -1,56 +1,9 @@
 import styled from 'styled-components'
 
-export const StyledWrapper = styled.div`
-  text-align: center;
-	padding-top: 3rem;
-`
-
-export const StyledForm = styled.div`
-	width: 70%;
-	margin: 0 auto;
-	background: #fff;
-	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
-				0px 2px 2px 0px rgba(0, 0, 0, 0.14),
-				0px 3px 1px -2px rgba(0, 0, 0, 0.12);
-	border-radius: 5px;
-	position: relative;
-	margin-bottom: -12rem;
-	padding: 2rem;
-	@media (max-width: 960px) {
-		padding: 2rem 1rem;
-		width: 80%;
-	}
-	@media (max-width: 800px) {
-		width: 100%;
-	}
-`
-
-export const Subtitle = styled.p`
-	margin-bottom: 1em;
-	color: #738a94;
-	font-size: 1.2em;
-	line-height: 1.55em;
-	letter-spacing: .2px;
-	@media (max-width: 800px) {
-		font-size: .8em;
-	}
-`
-
-export const Title = styled.h3`
-	margin: 0 0 3px;
-	padding: 0;
-	color: #15171a;
-	font-size: 1.5em;
-	line-height: 1;
-	font-weight: 700;
-	@media (max-width: 800px) {
-		font-size: 1em;
-	}
-`
-
 export const Message = styled.h4`
 	margin: 1rem 0;
 	font-weight: normal;
+
 	@media (max-width: 800px) {
         font-size: .9em;
         width: 90%;
@@ -60,36 +13,55 @@ export const Message = styled.h4`
 
 export const Error = styled.div`
     color: red;
+
     ${({ server }) => server && `
         margin-top: 1rem;
     `}
 `
 
+export const Label = styled.div`
+	padding: .5rem 0;
+
+	p {
+		font-size: 12pt;
+		color: #777777;
+
+		a {
+			text-decoration: underline;
+			color: #2B85FF;
+		}
+	}
+`
+
 export const Fields = styled.div`
 	display: flex;
 	align-items: center;
-	padding: 0rem 4rem;
+
 	@media (max-width: 960px) {
-		padding: 0rem 2rem;
-	}
-	@media (max-width: 800px) {
 		flex-direction: column;
 	}
 `
 
 export const Input = styled.input`
 	padding: .5rem;
-	border: 2px solid #536DFE;
-	border-radius: 7px;
-	flex: 2;
+	border: 2px solid #191847;
+	border-radius: 5px 0 0 5px;
+	width: 100%;
+	max-width: 70%;
+	flex: 1 auto;
+	box-sizing: border-box;
 
 	${({ error }) => error && `
 		border-color: #e53935;
 	`}
 
-	@media (max-width: 800px) {
-		flex: unset;
-		width: 100%;
+	@media (max-width: 1350px) {
+			max-width: 55%;
+	}
+
+	@media (max-width: 960px) {
+		max-width: 100%;
 		margin-bottom: 1rem;
+		border-radius: 5px;
 	}
 `

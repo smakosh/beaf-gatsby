@@ -21,11 +21,6 @@ export const Button = styled.button`
     user-select: none;
     cursor: pointer;
 
-    ${({ secondary }) => secondary && `
-        background: #536DFE;
-        margin-left: 1rem;
-    `}
-
     &:focus {
         outline: none;
     }
@@ -35,14 +30,20 @@ export const Button = styled.button`
     }
 
     ${({ subscribe }) => subscribe && `
-        flex: 1;
-        border-radius: 6px;
-        margin-left: 1rem;
+        border-radius: 0 5px 5px 0;
         height: 48px;
+        background: #191847;
+        width: 100%;
+        max-width: 30%;
+        flex: 1 auto;
 
-        @media (max-width: 800px) {
-            flex: unset;
-            margin: 0 auto;
+        @media (max-width: 1350px) {
+            max-width: 45%;
+        }
+
+        @media (max-width: 960px) {
+            max-width: 100%;
+            border-radius: 5px;
         }
     `}
 `

@@ -1,6 +1,6 @@
 module.exports = {
 	title: 'BEAF',
-	logo: 'https://beafapp.com//favicon/logo-48.png',
+	logo: 'https://beafapp.com/favicon/logo-48.png',
 	author: 'Ismail Ghallou (Smakosh)',
 	url: 'https://beafapp.com',
 	legalName: 'Ismail Ghallou',

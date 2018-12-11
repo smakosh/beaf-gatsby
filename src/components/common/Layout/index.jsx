@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import './layout.css'
 import { Header, Footer } from 'Theme'
-import { Subscribe } from 'Common'
 import { GlobalStyle } from './styles'
 
 const Layout = ({ children }) => (
@@ -9,7 +8,6 @@ const Layout = ({ children }) => (
 		<Header />
 		<GlobalStyle />
 		{children}
-		<Subscribe />
 		<Footer />
 	</Fragment>
 )

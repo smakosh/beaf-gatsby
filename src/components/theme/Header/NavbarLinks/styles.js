@@ -4,10 +4,6 @@ export const Links = styled.div`
     a {
         color: #6d6d6d;
         text-decoration: none;
-
-        &.current {
-            color: #212121;
-        }
     }
 
     ${({ desktop }) => (desktop ? `
