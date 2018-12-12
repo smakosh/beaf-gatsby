@@ -26,7 +26,7 @@ const Wrapper = ({
 				name="email"
 				error={!!errors.email}
 			/>
-			<Button type="submit" subscribe disabled={isSubmitting}>Subscribe</Button>
+			<Button type="submit" subscribe disabled={isSubmitting}>Get started!</Button>
 		</Fields>
 		{(touched.email && errors.email) && (
 			<Error>{errors.email}</Error>
@@ -64,11 +64,9 @@ const enhance = compose(
 					pathname: document.location.pathname
 				})
 				if (res.result === 'success') {
-					setValues({ status: 'success', msg: res.msg, email  })
-					setSubmitting(false)
-					setTimeout(() => {
-						window.location.href = `https://app.beafapp.com/register/?email=${email}`
-					}, 1400)
+					await setValues({ status: 'success', msg: res.msg, email  })
+					await setSubmitting(false)
+					window.location.href = `https://app.beafapp.com/register/?email=${email}`
 				} else {
 					setValues({ status: 'error', msg: res.msg, email  })
 					setSubmitting(false)
