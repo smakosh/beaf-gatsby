@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 export const Item = styled.div`
   width: 100%;
   max-width: 48%;
-  
+
   @media (max-width: 960px) {
     max-width: 100%;
 
@@ -32,17 +32,16 @@ export const Content = styled.div`
     text-align: center;
   }
 
-  h5 {
-    color: #A7A6A6;
-    font-size: 18pt;
-    margin-bottom: .4rem;
+  p {
+    color: #a7a6a6;
+    font-size: 14pt;
     font-weight: normal;
   }
 
   h1 {
     color: #191847;
     font-weight: normal;
-    font-size: 36pt;
+    font-size: 34pt;
     line-height: 1.2;
 
     @media (max-width: 1200px) {

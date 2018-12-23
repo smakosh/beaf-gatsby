@@ -19,6 +19,7 @@
     "gatsby-plugin-nprogress": "^2.0.6",
     "gatsby-plugin-offline": "^2.0.11",
     "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^2.0.7",
     "gatsby-plugin-styled-components": "^3.0.2",
     "gatsby-source-filesystem": "^2.0.8",
@@ -45,9 +46,11 @@
     "babel-eslint": "^8.2.5",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.1.0",
-    "eslint-plugin-react": "^7.9.1"
+    "eslint-plugin-react": "^7.9.1",
+    "prettier": "^1.15.3"
   },
   "repository": {
     "type": "git",

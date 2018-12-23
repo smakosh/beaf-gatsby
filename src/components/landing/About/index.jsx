@@ -4,22 +4,25 @@ import aboutIcon from 'Static/illustrations/about.svg'
 import { Wrapper, Item, Content } from './styles'
 
 const About = () => (
-	<Wrapper as={Container}>
-		<Item as={Content}>
-			<h5>Poll votes are boring <span role="img" aria-label="mind blown">🤯</span></h5>
-			<h1>Join Beaf & take your
-				audience engagement to
-				the next level!</h1>
-			<Subscribe />
-		</Item>
-		<Item>
-			<img
-				src={aboutIcon}
-				alt="about illustration"
-				style={{ marginBottom: 0 }}
-			/>
-		</Item>
-	</Wrapper>
+  <Wrapper as={Container}>
+    <Item as={Content}>
+      <h1>Join the community platform for making decisions!</h1>
+      <p>
+        Need help to decide the phone you should get? Not sure of choices you
+        should take? Or you just like to motivate others through your
+        transformation wether it was mentally or physically, Beaf is just the
+        right place to achieve that!
+      </p>
+      <Subscribe />
+    </Item>
+    <Item>
+      <img
+        src={aboutIcon}
+        alt="about illustration"
+        style={{ marginBottom: 0 }}
+      />
+    </Item>
+  </Wrapper>
 )
 
 export { About }
