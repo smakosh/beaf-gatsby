@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
   }
 `
 
@@ -24,6 +25,14 @@ export const List = styled.div`
   list-style: none;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 680px) {
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+  }
 
   a {
     color: #fff;
