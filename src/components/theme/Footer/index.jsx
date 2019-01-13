@@ -1,21 +1,21 @@
-import React, { Fragment } from 'react'
-import { Link } from 'gatsby'
-import { Container } from 'Common'
+import React from 'react'
+// import { Link } from 'gatsby'
+import { Container, Subscribe } from 'Common'
 import Copyrights from './Copyrights'
-import { FullContainer, List, Brand, Social, Wrapper } from './styles'
-// import Twitter from './assets/twitter.svg'
+import { FullContainer, List, /* Brand, */ Social, Wrapper } from './styles'
+import Twitter from './assets/twitter.svg'
 import Facebook from './assets/facebook.svg'
 import Instagram from './assets/instagram.svg'
 
-const Footer = () => {
+export const Footer = () => {
   const social = [
-    /* {
+    {
       id: 0,
-			name: 'Twitter',
-			icon: Twitter,
-      link: 'https://twitter.com/smakosh',
+      name: 'Twitter',
+      icon: Twitter,
+      link: 'https://twitter.com/beafappdotcom',
       last: false,
-    }, */
+    },
     {
       id: 0,
       name: 'Facebook',
@@ -32,14 +32,14 @@ const Footer = () => {
     },
   ]
   return (
-    <Fragment>
+    <>
       <FullContainer>
         <Wrapper as={Container}>
-          <List>
+          {/* <List>
             <Brand as={Link} to="/">
               BEAF
             </Brand>
-          </List>
+          </List> */}
           <List>
             <a href="https://app.beafapp.com/">App</a>
             <a href="https://app.beafapp.com/login">Login</a>
@@ -60,11 +60,12 @@ const Footer = () => {
               </Social>
             ))}
           </List>
+          <List>
+            <Subscribe />
+          </List>
         </Wrapper>
       </FullContainer>
       <Copyrights />
-    </Fragment>
+    </>
   )
 }
-
-export { Footer }

@@ -30,6 +30,10 @@ export const Content = styled.div`
 
   @media (max-width: 960px) {
     text-align: center;
+
+    ul {
+      list-style: none;
+    }
   }
 
   p {
@@ -41,7 +45,7 @@ export const Content = styled.div`
   h1 {
     color: #191847;
     font-weight: normal;
-    font-size: 34pt;
+    font-size: 28pt;
     line-height: 1.2;
 
     @media (max-width: 1200px) {

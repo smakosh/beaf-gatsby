@@ -1,15 +1,13 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  padding: 2rem 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 
   @media (max-width: 680px) {
-    flex-direction: column;
     justify-content: center;
-    text-align: center;
     align-items: center;
   }
 `
@@ -25,12 +23,34 @@ export const List = styled.div`
   list-style: none;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 28%;
+
+  &:last-child {
+    max-width: 38%;
+  }
+
+  @media (max-width: 960px) {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    &:last-child {
+      max-width: 70%;
+      margin: 0 auto;
+      margin-bottom: unset;
+
+      p {
+        margin-bottom: unset;
+      }
+    }
+  }
 
   @media (max-width: 680px) {
     margin-bottom: 2rem;
 
     &:last-child {
-      margin-bottom: unset;
+      max-width: 100%;
     }
   }
 
@@ -46,6 +66,11 @@ export const Brand = styled.div`
 
 export const Social = styled.a`
   color: #fff;
+  align-self: flex-start;
+
+  @media (max-width: 960px) {
+    align-self: center;
+  }
 
   img {
     margin-bottom: 0;

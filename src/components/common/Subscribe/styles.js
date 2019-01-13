@@ -49,7 +49,7 @@ export const Input = styled.input`
   border: 2px solid #191847;
   border-radius: 5px 0 0 5px;
   width: 100%;
-  max-width: 70%;
+  max-width: 60%;
   flex: 1 auto;
   box-sizing: border-box;
 

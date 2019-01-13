@@ -33,20 +33,18 @@ export const Button = styled.button`
   ${({ subscribe }) =>
     subscribe &&
     `
-        border-radius: 0 5px 5px 0;
-        height: 48px;
-        background: #191847;
-        width: 100%;
-        max-width: 30%;
-        flex: 1 auto;
+			border-radius: 0 5px 5px 0;
+			height: 48px;
+			background: #191847;
+			padding: unset;
+			width: 140px;
 
-        @media (max-width: 1350px) {
-            max-width: 45%;
-        }
+			@media (max-width: 960px) {
+				width: 160px;
+			}
 
-        @media (max-width: 680px) {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-    `}
+			@media (max-width: 680px) {
+				border-radius: 5px;
+			}
+	`}
 `

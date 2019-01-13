@@ -6,16 +6,22 @@ import { Wrapper, Item, Content } from './styles'
 const About = () => (
   <Wrapper as={Container}>
     <Item as={Content}>
-      <h1>Join the community platform for making decisions!</h1>
+      <h1>The community platform for making decisions!</h1>
       <ul>
-        <li>Need help to decide the phone you should get?</li>
-        <li>Not sure of choices you should take?</li>
+        <li>Need help to decide the phone you should buy?</li>
         <li>
-          Or you just like to motivate others through your transformation wether
-          it was mentally or physically, Beaf is just the right place to achieve
-          that!
+          Not sure of choices you should take in your professional career?
+        </li>
+        <li>
+          Or you just like to share your experience with the community to help
+          them take good decisions?
         </li>
       </ul>
+      <h4>Beaf is just the right place for that!</h4>
+      <p>
+        Be one of our early users and share your feedback with us while trying
+        the beta version
+      </p>
       <Subscribe />
     </Item>
     <Item>
