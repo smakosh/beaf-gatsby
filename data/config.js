@@ -3,19 +3,19 @@ module.exports = {
 	logo: 'https://beafapp.com/favicon/logo-48.png',
 	author: 'Ismail Ghallou (Smakosh)',
 	url: 'https://beafapp.com',
-	legalName: 'Ismail Ghallou',
-	description: 'BEAF - Share your wonderful moments and embrace others feedback!',
+	legalName: 'Beaf',
+	description: 'BEAF - The community platform for making decisions!',
 	socialLinks: {
-		twitter: 'http://www.twitter.com/smakosh',
+		twitter: 'http://www.twitter.com/beafappdotcom',
 		github: 'https://github.com/smakosh',
 		linkedin: 'https://www.linkedin.com/in/ismail-ghallou-630149122',
-		instagram: 'https://instagram.com/smakosh19',
+		instagram: 'https://instagram.com/beafapp',
 		youtube: 'https://www.youtube.com/user/smakoshthegamer',
 		google: 'https://plus.google.com/u/0/+IsmailSmakoshGhallou'
 	},
 	googleAnalyticsID: 'UA-88875900-2',
-	themeColor: '#FF6347',
-	backgroundColor: '#FF6347',
+	themeColor: '#181847',
+	backgroundColor: '#181847',
 	social: {
 		facebook: '165244147328608',
 		twitter: '@smakosh'

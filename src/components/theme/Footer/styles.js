@@ -16,7 +16,7 @@ export const FullContainer = styled.div`
   width: 100%;
   padding: 3rem 0;
   color: #fff;
-  background: #2e2d4e;
+  background: #1f224a;
 `
 
 export const List = styled.div`
@@ -28,6 +28,10 @@ export const List = styled.div`
 
   &:last-child {
     max-width: 38%;
+
+    p {
+      color: #fff;
+    }
   }
 
   @media (max-width: 960px) {

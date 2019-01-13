@@ -13,6 +13,7 @@ const Wrapper = ({
   values,
   handleBlur,
   handleChange,
+  color,
 }) => (
   <Form>
     <Fields>
@@ -25,8 +26,9 @@ const Wrapper = ({
         type="email"
         name="email"
         error={!!errors.email}
+        color={color}
       />
-      <Button type="submit" subscribe disabled={isSubmitting}>
+      <Button color={color} type="submit" subscribe disabled={isSubmitting}>
         Get started!
       </Button>
     </Fields>

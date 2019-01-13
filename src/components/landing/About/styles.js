@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 8rem 0;
+  align-items: center;
+  padding: 6rem 0;
   flex-wrap: wrap;
 
   @media (max-width: 960px) {
@@ -14,13 +14,18 @@ export const Wrapper = styled.div`
 
 export const Item = styled.div`
   width: 100%;
-  max-width: 48%;
+  max-width: 43%;
+
+  &:first-child {
+    max-width: 53%;
+  }
 
   @media (max-width: 960px) {
     max-width: 100%;
 
     &:first-child {
       margin-bottom: 2rem;
+      max-width: 100%;
     }
   }
 `
@@ -45,11 +50,15 @@ export const Content = styled.div`
   h1 {
     color: #191847;
     font-weight: normal;
-    font-size: 28pt;
+    font-size: 36pt;
     line-height: 1.2;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
       font-size: 32pt;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 28pt;
     }
 
     @media (max-width: 960px) {

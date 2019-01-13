@@ -46,12 +46,18 @@ export const Fields = styled.div`
 
 export const Input = styled.input`
   padding: 0.5rem;
-  border: 2px solid #191847;
+  border: 2px solid #3f46ad;
   border-radius: 5px 0 0 5px;
   width: 100%;
   max-width: 60%;
   flex: 1 auto;
   box-sizing: border-box;
+
+  ${({ color }) =>
+    color &&
+    `
+    border: 2px solid #${color};
+  `}
 
   ${({ error }) =>
     error &&

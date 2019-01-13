@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Button = styled.button`
   padding: 0.5rem 1.5rem;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  background: #ff6347;
+  background: #3f46ad;
   border-radius: 4px;
   font-size: 15px;
   font-weight: 600;
@@ -35,7 +35,7 @@ export const Button = styled.button`
     `
 			border-radius: 0 5px 5px 0;
 			height: 48px;
-			background: #191847;
+			
 			padding: unset;
 			width: 140px;
 
@@ -47,4 +47,10 @@ export const Button = styled.button`
 				border-radius: 5px;
 			}
 	`}
+
+  ${({ color }) =>
+    color &&
+    `
+    background: #${color};
+  `}
 `

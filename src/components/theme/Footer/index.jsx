@@ -17,14 +17,14 @@ export const Footer = () => {
       last: false,
     },
     {
-      id: 0,
+      id: 1,
       name: 'Facebook',
       icon: Facebook,
       link: 'https://www.facebook.com/Beaf-1027644994104292',
       last: false,
     },
     {
-      id: 1,
+      id: 2,
       name: 'Instagram',
       icon: Instagram,
       link: 'https://www.instagram.com/beafapp/',
@@ -61,7 +61,7 @@ export const Footer = () => {
             ))}
           </List>
           <List>
-            <Subscribe />
+            <Subscribe color="3f46ad" />
           </List>
         </Wrapper>
       </FullContainer>
