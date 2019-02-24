@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-// this can be used for input and text area, Magic isn't it
 export const Input = styled.input`
   width: 100%;
   margin-top: 1rem;
@@ -10,9 +9,9 @@ export const Input = styled.input`
   -webkit-appearance: none;
   transition: all 0.2s ease 0s;
   border-width: 2px;
-  border-color: #FF6347;
+  border-color: #ff6347;
   border-style: solid;
   border-radius: 5px;
-  padding: .9rem 1rem;
+  padding: 0.9rem 1rem;
   font-size: 12pt;
 `

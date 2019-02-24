@@ -1,15 +1,13 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import './layout.css'
 import { Header, Footer } from 'Theme'
-import { GlobalStyle } from './styles'
+import { GlobalStyle, Wrapper } from './styles'
 
-const Layout = ({ children }) => (
-	<Fragment>
-		<Header />
-		<GlobalStyle />
-		{children}
-		<Footer />
-	</Fragment>
+export const Layout = ({ children }) => (
+  <>
+    <GlobalStyle />
+    <Header />
+    <Wrapper>{children}</Wrapper>
+    <Footer />
+  </>
 )
-
-export { Layout }

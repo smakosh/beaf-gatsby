@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem 0;
   flex-wrap: wrap;
 
   @media (max-width: 960px) {

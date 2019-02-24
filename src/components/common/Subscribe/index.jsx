@@ -1,7 +1,6 @@
 import React from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
-import { compose } from 'recompose'
-import { withFormik, Form, Field } from 'formik'
+import { withFormik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { Button } from 'Common'
 import { Message, Error, Fields, Input, Label } from './styles'
@@ -9,7 +8,6 @@ import { Message, Error, Fields, Input, Label } from './styles'
 const Wrapper = ({
   errors,
   isSubmitting,
-  touched,
   values,
   handleBlur,
   handleChange,
@@ -32,7 +30,7 @@ const Wrapper = ({
         Get started!
       </Button>
     </Fields>
-    {touched.email && errors.email && <Error>{errors.email}</Error>}
+    <ErrorMessage component={Error} name="email" />
     <Label>
       <p>
         Already have an account?
@@ -54,41 +52,32 @@ const Wrapper = ({
   </Form>
 )
 
-const enhance = compose(
-  withFormik({
-    mapPropsToValues() {
-      return {
-        email: '',
-      }
-    },
-    validationSchema: () =>
-      Yup.object().shape({
-        email: Yup.string()
-          .email('Please enter a valid email!')
-          .required('Email is required!'),
-      }),
-    handleSubmit: async (
-      { email },
-      { setErrors, setSubmitting, setValues }
-    ) => {
-      try {
-        const res = await addToMailchimp(email, {
-          pathname: document.location.pathname,
-        })
-        if (res.result === 'success') {
-          await setValues({ status: 'success', msg: res.msg, email })
-          await setSubmitting(false)
-          window.location.href = `https://app.beafapp.com/register/?email=${email}`
-        } else {
-          setValues({ status: 'error', msg: res.msg, email })
-          setSubmitting(false)
-        }
-      } catch (err) {
-        setErrors({ message: err, status: 'error' })
+export const Subscribe = withFormik({
+  mapPropsToValues: () => ({
+    email: '',
+  }),
+  validationSchema: () =>
+    Yup.object().shape({
+      email: Yup.string()
+        .email('Please enter a valid email!')
+        .required('Email is required!'),
+    }),
+  handleSubmit: async ({ email }, { setErrors, setSubmitting, setValues }) => {
+    try {
+      const res = await addToMailchimp(email, {
+        pathname: document.location.pathname,
+      })
+      if (res.result === 'success') {
+        await setValues({ status: 'success', msg: res.msg, email })
+        await setSubmitting(false)
+        window.location.href = `https://app.beafapp.com/register/?email=${email}`
+      } else {
+        setValues({ status: 'error', msg: res.msg, email })
         setSubmitting(false)
       }
-    },
-  })
-)
-
-export const Subscribe = enhance(Wrapper)
+    } catch (err) {
+      setErrors({ message: err, status: 'error' })
+      setSubmitting(false)
+    }
+  },
+})(Wrapper)

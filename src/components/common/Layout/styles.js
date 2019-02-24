@@ -1,24 +1,30 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-	body {
-		font-family: 'Questrial', sans-serif;
-		margin: 0;
-		padding: 0;
-	}
+	html {
+		body {
+			font-family: 'Questrial', sans-serif;
+			margin: 0;
+			padding: 0;
+		}
 
-	a {
-		text-decoration: none;
-		color: inherit;
+		a {
+			text-decoration: none;
+			color: inherit;
 
-		&:focus {
-				outline: none;
+			&:focus {
+					outline: none;
+			}
+		}
+
+		button, input, select {
+			&:focus {
+					outline: none;
+			}
 		}
 	}
+`
 
-	button, input, select {
-		&:focus {
-				outline: none;
-		}
-	}
+export const Wrapper = styled.div`
+  padding: 6rem 0;
 `

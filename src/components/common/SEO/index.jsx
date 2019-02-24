@@ -1,20 +1,68 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Cover from 'Static/cover.png'
+import Thumbnail from 'Static/cover.png'
 import {
-	url,
-	description,
-	social,
-	socialLinks,
-	address,
-	contact,
-	legalName,
-	foundingDate,
-	logo,
+  url,
+  defaultTitle,
+  defaultDescription,
+  social,
+  socialLinks,
+  address,
+  contact,
+  legalName,
+  foundingDate,
+  logo,
+  author,
 } from 'Data'
 
-const SEO = ({ type, title, location = '' }) => {
-	const structuredDataOrganization = `{ 
+export const SEO = ({
+  title,
+  type,
+  description,
+  articleBody,
+  datePublished,
+  dateModified,
+  cover,
+  location = '',
+}) => {
+  const structuredDataArticle = `{
+		"@context": "http://schema.org",
+		"@type": "${type}",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://google.com/article"
+		},
+		"headline": "${description}",
+		"image": {
+			"@type": "imageObject",
+			"url": "${
+        cover
+          ? `https://beafapp.com${cover}`
+          : `https://beafapp.com${Thumbnail}`
+      }",
+			"height": "600",
+			"width": "800"
+		},
+		"datePublished": "${datePublished}",
+		"dateModified": "${dateModified}",
+		"author": {
+			"@type": "Person",
+			"name": "${author}"
+		},
+		"articleBody": "${articleBody}",
+		"publisher": {
+			"@type": "Organization",
+			"name": "${author}",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "${logo}"
+			}
+		},
+		"description": "${description}",
+		"url": "${url}${location}"
+	}`
+
+  const structuredDataOrganization = `{ 
 		"@context": "http://schema.org",
 		"@type": "${type}",
 		"legalName": "${legalName}",
@@ -48,30 +96,56 @@ const SEO = ({ type, title, location = '' }) => {
 		]
   	}`
 
-	return (
-		<Helmet>
-			<meta name="description" content={description} />
-			<meta name="image" content={`${url}${Cover}`} />
+  return (
+    <Helmet>
+      <meta name="description" content={description || defaultDescription} />
+      <meta
+        name="image"
+        content={cover ? `${url}${cover}` : `${url}${Thumbnail}`}
+      />
 
-			<meta property="og:url" content={`${url}${location}`} />
-			<meta property="og:type" content="website" />
-			<meta property="og:title" content={title} />
-			<meta property="og:description" content={description} />
-			<meta property="og:image" content={`${url}${Cover}`} />
-			<meta property="fb:app_id" content={social.facebook} />
+      <meta property="og:url" content={`${url}${location}`} />
+      <meta
+        property="og:type"
+        content={type === 'NewsArticle' ? 'NewsArticle' : 'website'}
+      />
+      <meta
+        property="og:title"
+        content={title ? `BEAF | ${title}` : defaultTitle}
+      />
+      <meta
+        property="og:description"
+        content={description || defaultDescription}
+      />
+      <meta
+        property="og:image"
+        content={cover ? `${url}${cover}` : `${url}${Thumbnail}`}
+      />
+      <meta property="fb:app_id" content={social.facebook} />
 
-			<meta name="twitter:card" content="summary" />
-			<meta name="twitter:creator" content={socialLinks.twitter} />
-			<meta name="twitter:site" content={social.twitter} />
-			<meta name="twitter:title" content={title} />
-			<meta name="twitter:description" content={description} />
-			<meta name="twitter:image:src" content={`${url}${Cover}`} />
-			<script type="application/ld+json">{structuredDataOrganization}</script>
-			<link rel="publisher" href={socialLinks.google} />
-			<title>{title}</title>
-			<html lang="en" dir="ltr" />
-		</Helmet>
-	)
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content={socialLinks.twitter} />
+      <meta name="twitter:site" content={social.twitter} />
+      <meta
+        name="twitter:title"
+        content={title ? `BEAF | ${title}` : defaultTitle}
+      />
+      <meta
+        name="twitter:description"
+        content={description || defaultDescription}
+      />
+      <meta
+        name="twitter:image:src"
+        content={cover ? `${url}${cover}` : `${url}${Thumbnail}`}
+      />
+      <script type="application/ld+json">
+        {type === 'NewsArticle'
+          ? structuredDataArticle
+          : structuredDataOrganization}
+      </script>
+      <link rel="publisher" href={socialLinks.google} />
+      <title>{title ? `BEAF | ${title}` : defaultTitle}</title>
+      <html lang="en" dir="ltr" />
+    </Helmet>
+  )
 }
-
-export { SEO }
