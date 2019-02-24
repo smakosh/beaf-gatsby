@@ -8,12 +8,20 @@ export default ({
     post: {
       html,
       timeToRead,
-      frontmatter: { title, date, slug },
+      frontmatter: { title, date, slug, thumbnail },
     },
   },
 }) => (
   <Layout>
-    <SEO title={title} location={slug} />
+    <SEO
+      type="NewsArticle"
+      title={title}
+      articleBody={html}
+      datePublished={date}
+      dateModified={date}
+      cover={thumbnail.childImageSharp.fluid.originalImg}
+      location={slug}
+    />
     <Content title={title} content={html} date={date} timeToRead={timeToRead} />
   </Layout>
 )
@@ -26,6 +34,13 @@ export const postQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        thumbnail {
+					childImageSharp {
+						fluid(maxWidth: 700) {
+							originalImg
+						}
+					}
+				}
       }
     }
   }
