@@ -11,7 +11,7 @@ We as humans are biased, no matter how much we try to be unbiased, we end up bei
 
 Try to think of a car brand for example and you will find out that you were thinking about the ones that you see most of the times or even the ones your environnement likes the most & sometimes being biased is a negative thing like what happened with the last US elections where there were ads on Facebook that advertised that Trump got more votes more than his competitor which laid to most people either voting for him or surrendering.
 
-That's why we introduced a new type of posts called "Unbiased posts" that simply hides the amount of votes on each vote until you vote to make as much unbiased as possible.
+That's why we introduced a new type of posts called "Unbiased posts" that simply hides the amount of votes on each vote until you vote to make your vote unbiased as much as possible.
 
 For new comers, you might have to [register](https://app.beafapp.com/register) to be able to vote & see the results on each post.
 
