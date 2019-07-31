@@ -35,7 +35,7 @@ export const Users = () => {
             </h4>
             <p>Including yourself ;)</p>
             <Join>
-              <Button as="a" href="https://app.beafapp.com/signup">
+              <Button as="a" href="https://app.beafapp.com/register">
                 Join Now
               </Button>
             </Join>
