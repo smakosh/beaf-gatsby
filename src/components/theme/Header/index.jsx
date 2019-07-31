@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import Navbar from './Navbar'
-import Hamburger from './Hamburger'
-import Sidebar from './Sidebar'
-import { StyledHeader, Overlay } from './styles'
+import React, { useState } from 'react';
+import Navbar from './Navbar';
+import Hamburger from './Hamburger';
+import Sidebar from './Sidebar';
+import { StyledHeader, Overlay } from './styles';
 
-export const Header = () => {
-  const [sidebar, setSidebar] = useState(false)
-  const toggle = () => setSidebar(!sidebar)
+export default () => {
+  const [sidebar, setSidebar] = useState(false);
+  const toggle = () => setSidebar(!sidebar);
 
   return (
     <StyledHeader>
@@ -15,5 +15,5 @@ export const Header = () => {
       <Hamburger sidebar={sidebar} toggle={toggle} />
       <Sidebar sidebar={sidebar} toggle={toggle} />
     </StyledHeader>
-  )
-}
+  );
+};

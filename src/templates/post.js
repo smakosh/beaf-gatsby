@@ -1,7 +1,8 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Layout, SEO } from 'Common'
-import { Content } from 'Components/article'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from 'components/common/Layout';
+import SEO from 'components/common/SEO';
+import { Content } from 'components/article';
 
 export default ({
   data: {
@@ -24,7 +25,7 @@ export default ({
     />
     <Content title={title} content={html} date={date} timeToRead={timeToRead} />
   </Layout>
-)
+);
 
 export const postQuery = graphql`
   query($slug: String!) {
@@ -35,13 +36,13 @@ export const postQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         thumbnail {
-					childImageSharp {
-						fluid(maxWidth: 700) {
-							originalImg
-						}
-					}
-				}
+          childImageSharp {
+            fluid(maxWidth: 700) {
+              originalImg
+            }
+          }
+        }
       }
     }
   }
-`
+`;

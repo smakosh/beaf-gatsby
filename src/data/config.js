@@ -32,4 +32,4 @@ module.exports = {
     phone: '+212-663-53-27-61',
   },
   foundingDate: '2018',
-}
+};

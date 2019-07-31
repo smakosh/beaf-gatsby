@@ -1,13 +1,14 @@
-import React from 'react'
-import './layout.css'
-import { Header, Footer } from 'Theme'
-import { GlobalStyle, Wrapper } from './styles'
+import React from 'react';
+import Header from 'components/theme/Header';
+import Footer from 'components/theme/Footer';
+import './layout.css';
+import { GlobalStyle } from './styles';
 
-export const Layout = ({ children }) => (
+export default ({ children }) => (
   <>
     <GlobalStyle />
     <Header />
-    <Wrapper>{children}</Wrapper>
+    {children}
     <Footer />
   </>
-)
+);

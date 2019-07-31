@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Item = styled.div`
   max-width: 48%;
@@ -9,7 +9,7 @@ export const Item = styled.div`
   @media (max-width: 960px) {
     max-width: 100%;
   }
-`
+`;
 
 export const Post = styled.div`
   border-radius: 0.1rem;
@@ -29,7 +29,7 @@ export const Post = styled.div`
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.2);
     transition: 0.7s;
   }
-`
+`;
 
 export const ArticleContent = styled.div`
   padding: 1rem;
@@ -39,7 +39,7 @@ export const ArticleContent = styled.div`
     overflow: hidden;
     padding: 0 1rem;
   }
-`
+`;
 
 export const ArticleImg = styled.div`
   height: 300px;
@@ -58,7 +58,7 @@ export const ArticleImg = styled.div`
     width: auto;
     flex: 1;
   }
-`
+`;
 
 export const ArticleTitle = styled.h2`
   color: #212121;
@@ -70,7 +70,7 @@ export const ArticleTitle = styled.h2`
     margin-bottom: 0.1rem;
     font-size: 12pt;
   }
-`
+`;
 
 export const Paragraph = styled.p`
   color: #616161;
@@ -83,7 +83,7 @@ export const Paragraph = styled.p`
     margin-bottom: 0.1rem;
     font-size: 10pt;
   }
-`
+`;
 
 export const Info = styled.i`
   color: #212121;
@@ -92,8 +92,8 @@ export const Info = styled.i`
   @media (max-width: 680px) {
     font-size: 0.6em;
   }
-`
+`;
 
 export const StyledSpan = styled.span`
   margin-left: 10px;
-`
+`;

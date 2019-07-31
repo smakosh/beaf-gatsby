@@ -1,12 +1,14 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Links = styled.div`
-    a {
-        color: #6d6d6d;
-        text-decoration: none;
-    }
+  a {
+    color: #6d6d6d;
+    text-decoration: none;
+  }
 
-    ${({ desktop }) => (desktop ? `
+  ${({ desktop }) =>
+    desktop
+      ? `
         @media (max-width: 960px) {
             display: none;
         }
@@ -18,7 +20,8 @@ export const Links = styled.div`
                 margin-right: unset;
             }
         }
-    ` : `
+    `
+      : `
         padding: 3rem;
         display: flex;
         flex-direction: column;
@@ -30,5 +33,5 @@ export const Links = styled.div`
                 margin-bottom: unset;
             }
         }
-    `)}
-`
+    `}
+`;

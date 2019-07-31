@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const Button = styled.button`
+const Button = styled.button`
   padding: 0.5rem 1.5rem;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   background: #3f46ad;
@@ -53,4 +53,6 @@ export const Button = styled.button`
     `
     background: #${color};
   `}
-`
+`;
+
+export default Button;

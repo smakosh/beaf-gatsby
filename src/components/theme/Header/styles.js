@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledHeader = styled.div`
   background: #fff;
@@ -7,7 +7,7 @@ export const StyledHeader = styled.div`
   border-bottom: 0.01em solid rgb(204, 204, 204);
   border-top: 5px solid #3f46ad;
   margin-bottom: -3rem;
-`
+`;
 
 export const Overlay = styled.div`
   position: fixed;
@@ -23,4 +23,4 @@ export const Overlay = styled.div`
 		display: block;
 		z-index: 4;	
 	`}
-`
+`;

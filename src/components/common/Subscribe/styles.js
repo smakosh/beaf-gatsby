@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Message = styled.h4`
   margin: 1rem 0;
@@ -9,7 +9,7 @@ export const Message = styled.h4`
     width: 90%;
     margin: 1rem auto;
   }
-`
+`;
 
 export const Error = styled.div`
   color: red;
@@ -19,7 +19,7 @@ export const Error = styled.div`
     `
         margin-top: 1rem;
     `}
-`
+`;
 
 export const Label = styled.div`
   padding: 0.5rem 0;
@@ -33,7 +33,7 @@ export const Label = styled.div`
       color: #2b85ff;
     }
   }
-`
+`;
 
 export const Fields = styled.div`
   display: flex;
@@ -42,7 +42,7 @@ export const Fields = styled.div`
   @media (max-width: 680px) {
     flex-direction: column;
   }
-`
+`;
 
 export const Input = styled.input`
   padding: 0.5rem;
@@ -77,4 +77,4 @@ export const Input = styled.input`
     margin-bottom: 1rem;
     border-radius: 5px;
   }
-`
+`;
