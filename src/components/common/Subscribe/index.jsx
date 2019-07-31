@@ -1,9 +1,9 @@
-import React from 'react'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
-import { withFormik, Form, Field, ErrorMessage } from 'formik'
-import * as Yup from 'yup'
-import { Button } from 'Common'
-import { Message, Error, Fields, Input, Label } from './styles'
+import React from 'react';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
+import { withFormik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import Button from 'components/common/Button';
+import { Message, Error, Fields, Input, Label } from './styles';
 
 const Wrapper = ({
   errors,
@@ -33,8 +33,7 @@ const Wrapper = ({
     <ErrorMessage component={Error} name="email" />
     <Label>
       <p>
-        Already have an account?
-        {' '}
+        Already have an account?{' '}
         <a href="https://app.beafapp.com/login">Login</a>
       </p>
     </Label>
@@ -50,9 +49,9 @@ const Wrapper = ({
       <Error server dangerouslySetInnerHTML={{ __html: values.msg }} />
     )}
   </Form>
-)
+);
 
-export const Subscribe = withFormik({
+const Subscribe = withFormik({
   mapPropsToValues: () => ({
     email: '',
   }),
@@ -66,18 +65,20 @@ export const Subscribe = withFormik({
     try {
       const res = await addToMailchimp(email, {
         pathname: document.location.pathname,
-      })
+      });
       if (res.result === 'success') {
-        await setValues({ status: 'success', msg: res.msg, email })
-        await setSubmitting(false)
-        window.location.href = `https://app.beafapp.com/register/?email=${email}`
+        await setValues({ status: 'success', msg: res.msg, email });
+        await setSubmitting(false);
+        window.location.href = `https://app.beafapp.com/register/?email=${email}`;
       } else {
-        setValues({ status: 'error', msg: res.msg, email })
-        setSubmitting(false)
+        setValues({ status: 'error', msg: res.msg, email });
+        setSubmitting(false);
       }
     } catch (err) {
-      setErrors({ message: err, status: 'error' })
-      setSubmitting(false)
+      setErrors({ message: err, status: 'error' });
+      setSubmitting(false);
     }
   },
-})(Wrapper)
+})(Wrapper);
+
+export default Subscribe;

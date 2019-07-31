@@ -1,15 +1,16 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  padding: 6rem 0;
 
   @media (max-width: 960px) {
     flex-direction: column;
   }
-`
+`;
 
 export const Item = styled.div`
   width: 100%;
@@ -27,7 +28,7 @@ export const Item = styled.div`
       max-width: 100%;
     }
   }
-`
+`;
 
 export const Content = styled.div`
   padding-top: 3rem;
@@ -64,4 +65,4 @@ export const Content = styled.div`
       font-size: 26pt;
     }
   }
-`
+`;

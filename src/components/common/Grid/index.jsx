@@ -1,8 +1,8 @@
-import React from 'react'
-import { Card } from 'Common'
-import { Flex } from './styles'
+import React from 'react';
+import Card from 'components/common/Card';
+import { Flex } from './styles';
 
-export const Grid = ({ data }) => (
+const Grid = ({ data }) => (
   <Flex>
     {data.map(
       ({
@@ -25,4 +25,6 @@ export const Grid = ({ data }) => (
       )
     )}
   </Flex>
-)
+);
+
+export default Grid;

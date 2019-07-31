@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   text-align: center;
   padding: 4rem 0;
-`
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ export const Content = styled.div`
   @media (max-width: 960px) {
     flex-direction: column;
   }
-`
+`;
 
 export const Item = styled.div`
   width: 100%;
@@ -30,9 +30,8 @@ export const Item = styled.div`
     width: 100%;
     margin-bottom: 1rem;
   }
-  
 
   h4 {
     font-weight: lighter;
   }
-`
+`;

@@ -1,6 +1,6 @@
-import React from 'react'
-import { navigate } from 'gatsby'
-import Img from 'gatsby-image'
+import React from 'react';
+import { navigate } from 'gatsby';
+import Img from 'gatsby-image';
 import {
   Item,
   Post,
@@ -10,16 +10,9 @@ import {
   Paragraph,
   Info,
   StyledSpan,
-} from './styles'
+} from './styles';
 
-export const Card = ({
-  description,
-  title,
-  slug,
-  thumbnail,
-  date,
-  timeToRead,
-}) => (
+const Card = ({ description, title, slug, thumbnail, date, timeToRead }) => (
   <Item>
     <Post onClick={() => navigate(slug)}>
       <ArticleImg>
@@ -30,13 +23,11 @@ export const Card = ({
         <Paragraph>{description}</Paragraph>
         <Info>
           {date}
-          <StyledSpan>
-            {timeToRead}
-            {' '}
-min read
-          </StyledSpan>
+          <StyledSpan>{timeToRead} min read</StyledSpan>
         </Info>
       </ArticleContent>
     </Post>
   </Item>
-)
+);
+
+export default Card;

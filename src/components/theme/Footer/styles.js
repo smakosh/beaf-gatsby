@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -10,14 +10,14 @@ export const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
-`
+`;
 
 export const FullContainer = styled.div`
   width: 100%;
   padding: 3rem 0;
   color: #fff;
   background: #1f224a;
-`
+`;
 
 export const List = styled.div`
   list-style: none;
@@ -61,12 +61,12 @@ export const List = styled.div`
   a {
     color: #fff;
   }
-`
+`;
 
 export const Brand = styled.div`
   display: flex;
   align-items: center;
-`
+`;
 
 export const Social = styled.a`
   color: #fff;
@@ -85,4 +85,4 @@ export const Social = styled.a`
     `
 		margin-right: unset;
 	`}
-`
+`;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   max-width: 960px;
@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   p {
     line-height: 1.8;
   }
-`
+`;
 
 export const Post = styled.div`
   padding: 2rem 0;
@@ -15,4 +15,4 @@ export const Post = styled.div`
     color: #3e46ac;
     text-decoration: underline;
   }
-`
+`;

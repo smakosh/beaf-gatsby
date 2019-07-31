@@ -1,8 +1,8 @@
-const config = require('./data/config')
+const config = require('./src/data/config');
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -66,7 +66,9 @@ module.exports = {
 				}`,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => allMarkdownRemark.edges.map(edge => Object.assign({}, edge.node.frontmatter, {
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.edges.map(edge =>
+                Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   url:
                     site.siteMetadata.rssMetadata.site_url +
@@ -75,7 +77,8 @@ module.exports = {
                     site.siteMetadata.rssMetadata.site_url +
                     edge.node.frontmatter.slug,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
-                })),
+                })
+              ),
             query: `{
 							allMarkdownRemark(
 								limit: 1000,
@@ -170,4 +173,4 @@ module.exports = {
     },
     // 'gatsby-plugin-offline'
   ],
-}
+};

@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { Container } from 'Common'
-import logo from 'Static/logo.svg'
-import NavbarLinks from '../NavbarLinks'
-import { Brand, Wrapper, Logo } from './styles'
+import React from 'react';
+import { Link } from 'gatsby';
+import Container from 'components/common/Container';
+import logo from 'assets/logo.svg';
+import NavbarLinks from '../NavbarLinks';
+import { Brand, Wrapper, Logo } from './styles';
 
 export default () => (
   <Wrapper as={Container}>
@@ -14,4 +14,4 @@ export default () => (
     </Brand>
     <NavbarLinks desktop />
   </Wrapper>
-)
+);

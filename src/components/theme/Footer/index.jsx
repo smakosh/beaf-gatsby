@@ -1,13 +1,13 @@
-import React from 'react'
-// import { Link } from 'gatsby'
-import { Container, Subscribe } from 'Common'
-import Copyrights from './Copyrights'
-import { FullContainer, List, /* Brand, */ Social, Wrapper } from './styles'
-import Twitter from './assets/twitter.svg'
-import Facebook from './assets/facebook.svg'
-import Instagram from './assets/instagram.svg'
+import React from 'react';
+import Container from 'components/common/Container';
+import Subscribe from 'components/common/Subscribe';
+import Copyrights from './Copyrights';
+import { FullContainer, List, Social, Wrapper } from './styles';
+import Twitter from './assets/twitter.svg';
+import Facebook from './assets/facebook.svg';
+import Instagram from './assets/instagram.svg';
 
-export const Footer = () => {
+export default () => {
   const social = [
     {
       id: 0,
@@ -30,16 +30,11 @@ export const Footer = () => {
       link: 'https://www.instagram.com/beafapp/',
       last: false,
     },
-  ]
+  ];
   return (
     <>
       <FullContainer>
         <Wrapper as={Container}>
-          {/* <List>
-            <Brand as={Link} to="/">
-              BEAF
-            </Brand>
-          </List> */}
           <List>
             <a href="https://app.beafapp.com/">App</a>
             <a href="https://app.beafapp.com/login">Login</a>
@@ -67,5 +62,5 @@ export const Footer = () => {
       </FullContainer>
       <Copyrights />
     </>
-  )
-}
+  );
+};

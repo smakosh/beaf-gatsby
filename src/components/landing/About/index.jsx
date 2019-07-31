@@ -1,7 +1,8 @@
-import React from 'react'
-import { Container, Subscribe } from 'Common'
-import aboutIcon from 'Static/illustrations/about.svg'
-import { Wrapper, Item, Content } from './styles'
+import React from 'react';
+import Container from 'components/common/Container';
+import Subscribe from 'components/common/Subscribe';
+import aboutIcon from 'assets/illustrations/about.svg';
+import { Wrapper, Item, Content } from './styles';
 
 const About = () => (
   <Wrapper as={Container}>
@@ -32,6 +33,6 @@ const About = () => (
       />
     </Item>
   </Wrapper>
-)
+);
 
-export { About }
+export { About };

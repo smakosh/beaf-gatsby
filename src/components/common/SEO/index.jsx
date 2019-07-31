@@ -1,6 +1,6 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Thumbnail from 'Static/cover.png'
+import React from 'react';
+import Helmet from 'react-helmet';
+import Thumbnail from 'assets/cover.png';
 import {
   url,
   defaultTitle,
@@ -13,9 +13,9 @@ import {
   foundingDate,
   logo,
   author,
-} from 'Data'
+} from 'data/config';
 
-export const SEO = ({
+const SEO = ({
   title,
   type,
   description,
@@ -60,7 +60,7 @@ export const SEO = ({
 		},
 		"description": "${description}",
 		"url": "${url}${location}"
-	}`
+	}`;
 
   const structuredDataOrganization = `{ 
 		"@context": "http://schema.org",
@@ -94,7 +94,7 @@ export const SEO = ({
 			"${socialLinks.instagram}",
 			"${socialLinks.github}"
 		]
-  	}`
+  	}`;
 
   return (
     <Helmet>
@@ -147,5 +147,7 @@ export const SEO = ({
       <title>{title ? `BEAF | ${title}` : defaultTitle}</title>
       <html lang="en" dir="ltr" />
     </Helmet>
-  )
-}
+  );
+};
+
+export default SEO;
