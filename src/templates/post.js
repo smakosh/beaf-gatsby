@@ -23,7 +23,14 @@ export default ({
       cover={thumbnail.childImageSharp.fluid.originalImg}
       location={slug}
     />
-    <Content title={title} content={html} date={date} timeToRead={timeToRead} />
+    <div style={{ paddingTop: '8rem' }}>
+      <Content
+        title={title}
+        content={html}
+        date={date}
+        timeToRead={timeToRead}
+      />
+    </div>
   </Layout>
 );
 
